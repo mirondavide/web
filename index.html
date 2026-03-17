@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ristorante Pizzeria Andrea's – Sant'Andrea Bagni</title>
+  <meta name="description" content="Ristorante Pizzeria Andrea's a Sant'Andrea Bagni (PR). Pizza sottile e croccante, pesce fresco, kamut, integrale, senza glutine. Prenota il tuo tavolo."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon">🍕</span>
+        <span class="logo-text">Andrea's</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">La Nostra Storia</a>
+        <a href="#menu">Menu</a>
+        <a href="#specials">Specialità</a>
+        <a href="#reviews">Recensioni</a>
+        <a href="#contact">Contatti</a>
+      </nav>
+      <a href="tel:+390525431818" class="btn-nav">Prenota</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">La Nostra Storia</a>
+      <a href="#menu">Menu</a>
+      <a href="#specials">Specialità</a>
+      <a href="#reviews">Recensioni</a>
+      <a href="#contact">Contatti</a>
+      <a href="tel:+390525431818" class="btn-mobile">Prenota ora</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Sant'Andrea Bagni, Medesano (PR)</p>
+      <h1 class="hero-title">
+        Il gusto autentico<br />
+        <em>della vera pizza italiana</em>
+      </h1>
+      <p class="hero-sub">
+        Pizza sottile e croccante, pesce freschissimo,<br class="d-md-none"/>
+        impasti speciali e la passione di oltre vent'anni.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn-primary">Scopri il Menu</a>
+        <a href="#contact" class="btn-outline">Vieni a trovarci</a>
+      </div>
+      <div class="hero-badges">
+        <div class="badge"><span class="badge-num">772</span><span class="badge-label">Recensioni Google</span></div>
+        <div class="badge-sep"></div>
+        <div class="badge"><span class="badge-num">4.2★</span><span class="badge-label">Valutazione media</span></div>
+        <div class="badge-sep"></div>
+        <div class="badge"><span class="badge-num">163</span><span class="badge-label">Recensioni TripAdvisor</span></div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scorri in basso">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <div class="about-img-main img-placeholder">
+            <div class="img-icon">🍕</div>
+          </div>
+          <div class="about-img-badge">
+            <span class="badge-year">dal</span>
+            <span class="badge-year-num">2001</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-eyebrow">La Nostra Storia</p>
+          <h2 class="section-title">Una storia nata<br /><em>dal cuore di Sant'Andrea</em></h2>
+          <p>
+            Il nome <strong>Andrea's</strong> nasce dallo pseudonimo di una vecchia discoteca,
+            all'epoca famosissima, situata anch'essa a Sant'Andrea, frazione di Medesano (PR).
+            Da quel luogo di ritrovo è nata la nostra passione per l'ospitalità e per il buon cibo.
+          </p>
+          <p>
+            Oggi Andrea's è un punto di riferimento per chi cerca una pizza sottile, croccante,
+            con ingredienti selezionati e sapori genuini. Accanto alla pizza, il nostro cuore batte
+            forte per il pesce fresco: antipasti, tortelli, gamberoni e fritture che raccontano
+            il mare con semplicità.
+          </p>
+          <div class="about-features">
+            <div class="feat-item">
+              <span class="feat-icon">🌾</span>
+              <span>Impasti speciali: kamut, integrale, senza lievito</span>
+            </div>
+            <div class="feat-item">
+              <span class="feat-icon">🚫🌾</span>
+              <span>Cucina senza glutine certificata AIC</span>
+            </div>
+            <div class="feat-item">
+              <span class="feat-icon">🌿</span>
+              <span>Opzioni vegane disponibili</span>
+            </div>
+            <div class="feat-item">
+              <span class="feat-icon">🐟</span>
+              <span>Specialità di pesce fresco</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU HIGHLIGHTS -->
+  <section class="menu section section-dark" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow light">Il Nostro Menu</p>
+        <h2 class="section-title light">Sapori che conquistano<br /><em>ad ogni morso</em></h2>
+        <p class="section-desc light">Ingredienti genuini, impasti lavorati con cura, ricette della tradizione e qualche sorpresa moderna.</p>
+      </div>
+
+      <div class="menu-tabs" id="menuTabs">
+        <button class="tab active" data-tab="pizza">🍕 Pizza</button>
+        <button class="tab" data-tab="pesce">🐟 Pesce</button>
+        <button class="tab" data-tab="antipasti">🥗 Antipasti</button>
+        <button class="tab" data-tab="dolci">🍮 Dolci</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Pizza tab -->
+        <div class="menu-tab-content active" data-content="pizza">
+          <div class="menu-cards">
+            <div class="menu-card">
+              <div class="menu-card-emoji">🍕</div>
+              <h3>Margherita</h3>
+              <p>Pomodoro San Marzano, fior di latte, basilico fresco. La classica per eccellenza.</p>
+              <span class="menu-tag">Classica</span>
+            </div>
+            <div class="menu-card featured">
+              <span class="menu-feat-label">⭐ Chef's choice</span>
+              <div class="menu-card-emoji">🔥</div>
+              <h3>Pizza Sottile &amp; Croccante</h3>
+              <p>La nostra firma: impasto tirato sottile per sentire ogni ingrediente e una croccantezza inconfondibile.</p>
+              <span class="menu-tag">Signature</span>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-emoji">🌾</div>
+              <h3>Pizza al Kamut</h3>
+              <p>Impasto di farina di kamut, più digeribile e dal sapore unico. Personalizzabile con tutti i condimenti.</p>
+              <span class="menu-tag">Speciale</span>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-emoji">🌿</div>
+              <h3>Pizza Integrale</h3>
+              <p>Farina integrale macinata a pietra, ricca di fibre e con un carattere rustico irresistibile.</p>
+              <span class="menu-tag">Integrale</span>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-emoji">✨</div>
+              <h3>Pizza Senza Lievito</h3>
+              <p>Per chi è sensibile al lievito: stesso gusto, stessa croccantezza, zero compromessi.</p>
+              <span class="menu-tag">Senza lievito</span>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-emoji">🚫🌾</div>
+              <h3>Pizza Senza Glutine</h3>
+              <p>Certificata AIC. Preparata in ambiente dedicato per garantire la massima sicurezza ai celiaci.</p>
+              <span class="menu-tag gluten">Senza glutine</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pesce tab -->
+        <div class="menu-tab-content" data-content="pesce">
+          <div class="menu-cards">
+            <div class="menu-card featured">
+              <span class="menu-feat-label">⭐ Specialità</span>
+              <div class="menu-card-emoji">🦐</div>
+              <h3>Gamberoni alla Griglia</h3>
+              <p>Gamberoni freschi grigliati con olio extravergine, aglio e prezzemolo. Semplicità che conquista.</p>
+              <span class="menu-tag">Pesce</span>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-emoji">🍝</div>
+              <h3>Tortelli al Pesce</h3>
+              <p>Pasta fresca ripiena di pesce con salsa delicata. Un primo piatto da non perdere.</p>
+              <span class="menu-tag">Primo</span>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-emoji">🍤</div>
+              <h3>Fritto Misto</h3>
+              <p>Frittura croccante di calamari, gamberi e pesci misti. Il classico italiano in versione perfetta.</p>
+              <span class="menu-tag">Fritto</span>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-emoji">🐠</div>
+              <h3>Antipasto di Mare</h3>
+              <p>Selezione di antipasti di mare freddi e caldi, per aprire il pasto con il sapore del mare.</p>
+              <span class="menu-tag">Antipasto</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Antipasti tab -->
+        <div class="menu-tab-content" data-content="antipasti">
+          <div class="menu-cards">
+            <div class="menu-card">
+              <div class="menu-card-emoji">🥗</div>
+              <h3>Antipasto della Casa</h3>
+              <p>Selezione di salumi, formaggi locali e verdure di stagione. Il benvenuto di Andrea's.</p>
+              <span class="menu-tag">Antipasto</span>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-emoji">🍅</div>
+              <h3>Bruschette Assortite</h3>
+              <p>Pane casereccio tostato con pomodoro fresco, olio EVO e basilico profumato.</p>
+              <span class="menu-tag">Veg</span>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-emoji">🌿</div>
+              <h3>Verdure Grigliate</h3>
+              <p>Zucchine, melanzane, peperoni e radicchio grigliati con erbe aromatiche e olio d'oliva.</p>
+              <span class="menu-tag">Vegano</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dolci tab -->
+        <div class="menu-tab-content" data-content="dolci">
+          <div class="menu-cards">
+            <div class="menu-card">
+              <div class="menu-card-emoji">🍮</div>
+              <h3>Tiramisù della Casa</h3>
+              <p>Ricetta artigianale con savoiardi, mascarpone, caffè e cacao amaro. Fatto ogni giorno.</p>
+              <span class="menu-tag">Dolce</span>
+            </div>
+            <div class="menu-card featured">
+              <span class="menu-feat-label">⭐ Consigliato</span>
+              <div class="menu-card-emoji">🍨</div>
+              <h3>Gelato Artigianale</h3>
+              <p>Selezione di gusti stagionali preparati con ingredienti freschi e naturali.</p>
+              <span class="menu-tag">Dolce</span>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card-emoji">🍫</div>
+              <h3>Tortino al Cioccolato</h3>
+              <p>Cuore morbido di cioccolato fondente con gelato alla vaniglia. Servito caldo.</p>
+              <span class="menu-tag">Dolce</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-cta">
+        <p>Menu completo con 27+ piatti disponibili</p>
+        <a href="tel:+390525431818" class="btn-primary">Prenota un tavolo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALS -->
+  <section class="specials section" id="specials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Perché sceglierci</p>
+        <h2 class="section-title">Le nostre<br /><em>specialità uniche</em></h2>
+      </div>
+      <div class="specials-grid">
+        <div class="special-card">
+          <div class="special-icon">🌾</div>
+          <h3>Impasti Speciali</h3>
+          <p>Kamut, integrale, senza lievito: per ogni esigenza un impasto pensato con cura, senza rinunciare al gusto.</p>
+        </div>
+        <div class="special-card highlight">
+          <div class="special-icon">🏅</div>
+          <h3>Certificazione AIC</h3>
+          <p>La nostra cucina senza glutine è iscritta all'Associazione Italiana Celiachia. Mangi sicuro.</p>
+        </div>
+        <div class="special-card">
+          <div class="special-icon">🐟</div>
+          <h3>Pesce Fresco</h3>
+          <p>Una tradizione che sorprende: siamo nell'entroterra, ma il pesce è la nostra seconda anima.</p>
+        </div>
+        <div class="special-card">
+          <div class="special-icon">🌿</div>
+          <h3>Opzioni Vegane</h3>
+          <p>Un menu ricco di scelte vegetali, pensato per chi vuole gustare senza compromessi.</p>
+        </div>
+        <div class="special-card">
+          <div class="special-icon">🏡</div>
+          <h3>Sala Privata</h3>
+          <p>Spazio privato per eventi, feste e cene aziendali. Contattaci per organizzare il tuo evento speciale.</p>
+        </div>
+        <div class="special-card">
+          <div class="special-icon">☀️</div>
+          <h3>Tavoli all'Aperto</h3>
+          <p>Goditi la bella stagione nella nostra veranda all'aperto, in una location accogliente e rilassante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews section section-warm" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Cosa dicono di noi</p>
+        <h2 class="section-title">Le voci<br /><em>dei nostri clienti</em></h2>
+      </div>
+      <div class="reviews-stats">
+        <div class="stat">
+          <span class="stat-num">4.2</span>
+          <span class="stat-stars">★★★★☆</span>
+          <span class="stat-label">Google · 772 recensioni</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num">3.9</span>
+          <span class="stat-stars">★★★★☆</span>
+          <span class="stat-label">TripAdvisor · 163 recensioni</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num">5.0</span>
+          <span class="stat-stars">★★★★★</span>
+          <span class="stat-label">Facebook · 4,2K+ follower</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Personale qualificato e pizza buonissima, lo consiglio vivamente!"</p>
+          <div class="review-author">
+            <div class="review-avatar">A</div>
+            <div>
+              <strong>Andrea C.</strong>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card featured-review">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"La pizzeria è la migliore che c'è in zona. Pizza appositamente sottile per sentire e assaporare i sapori degli ingredienti scelti e la croccantezza."</p>
+          <div class="review-author">
+            <div class="review-avatar">S</div>
+            <div>
+              <strong>Cliente TripAdvisor</strong>
+              <span>TripAdvisor Review</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Molto bello il luogo. Sala ordinata e pulita. Il menù è ricco, la loro specialità è il pesce. Consigliato!"</p>
+          <div class="review-author">
+            <div class="review-avatar">S</div>
+            <div>
+              <strong>Superferro 92</strong>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Ogni piatto è preparato con ingredienti genuini e di qualità. Ottimi sia la pizza che i piatti di pesce. Ambiente accogliente."</p>
+          <div class="review-author">
+            <div class="review-avatar">C</div>
+            <div>
+              <strong>Cliente Instagram</strong>
+              <span>Instagram</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-eyebrow">Vieni a trovarci</p>
+          <h2 class="section-title">Dove siamo<br /><em>e come prenotare</em></h2>
+          <div class="contact-items">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Indirizzo</strong>
+                <p>Viale Circonvallazione, 9/11<br />43048 Sant'Andrea Bagni (PR)</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>Telefono</strong>
+                <p><a href="tel:+390525431818">0525 431818</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🕐</span>
+              <div>
+                <strong>Orari</strong>
+                <p>Aperto a pranzo dalle 12:00<br />e a cena dalle 19:00<br /><em>Consultare per giornate di chiusura</em></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">💶</span>
+              <div>
+                <strong>Fascia di prezzo</strong>
+                <p>10 – 20 € a persona</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="https://www.facebook.com/Andreaspizzeriaristorante" target="_blank" rel="noopener" class="social-btn facebook">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-btn instagram">Instagram</a>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            title="Mappa Ristorante Pizzeria Andrea's"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.5!2d10.1305!3d44.6535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sFristorante+Pizzeria+Andrea%27s!5e0!3m2!1sit!2sit!4v1"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <a
+            href="https://www.google.com/maps/search/Ristorante+Pizzeria+Andrea%27s+Sant%27Andrea+Bagni"
+            target="_blank"
+            rel="noopener"
+            class="map-link"
+          >
+            Apri in Google Maps →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-icon">🍕</span>
+          <span class="footer-logo-text">Ristorante Pizzeria Andrea's</span>
+          <p>Viale Circonvallazione, 9/11<br />43048 Sant'Andrea Bagni (PR)</p>
+          <p><a href="tel:+390525431818">0525 431818</a></p>
+        </div>
+        <div class="footer-links">
+          <h4>Menu rapido</h4>
+          <a href="#about">La Nostra Storia</a>
+          <a href="#menu">Menu</a>
+          <a href="#specials">Specialità</a>
+          <a href="#reviews">Recensioni</a>
+          <a href="#contact">Contatti</a>
+        </div>
+        <div class="footer-links">
+          <h4>Seguici</h4>
+          <a href="https://www.facebook.com/Andreaspizzeriaristorante" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tripadvisor.it" target="_blank" rel="noopener">TripAdvisor</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ristorante Pizzeria Andrea's · Sant'Andrea Bagni (PR) · P.IVA non disponibile</p>
+        <p>Sito creato con ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
