@@ -4,7 +4,7 @@
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
+  if (window.scrollY > 40) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
@@ -12,41 +12,25 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ===========================
-// HAMBURGER MENU
+// MOBILE MENU
 // ===========================
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
 
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  navMenu.classList.toggle('active');
 });
 
-mobileMenu.querySelectorAll('a').forEach(link => {
+navMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
+    menuToggle.classList.remove('active');
+    navMenu.classList.remove('active');
   });
 });
 
 // ===========================
-// MENU TABS
-// ===========================
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.menu-tab-content');
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = tab.dataset.tab;
-
-    tabs.forEach(t => t.classList.remove('active'));
-    contents.forEach(c => c.classList.remove('active'));
-
-    tab.classList.add('active');
-    document.querySelector(`[data-content="${target}"]`).classList.add('active');
-  });
-});
-
-// ===========================
-// SMOOTH SCROLL for anchor links
+// SMOOTH SCROLL
 // ===========================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
@@ -55,35 +39,72 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(targetId);
     if (!target) return;
     e.preventDefault();
-    const offset = 80;
+    const offset = 100;
     const top = target.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
 
 // ===========================
-// REVEAL ON SCROLL (Intersection Observer)
+// SCROLL ANIMATIONS
 // ===========================
-const revealEls = document.querySelectorAll(
-  '.menu-card, .special-card, .review-card, .feat-item, .contact-item, .about-img-wrap, .about-text'
+const animatedElements = document.querySelectorAll(
+  '.pick-card, .menu-item, .review-card, .faq-item, .contact-card, .contact-map, .rating-badge, .menu-note'
 );
 
 const observer = new IntersectionObserver(
   (entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.style.transitionDelay = `${i * 0.04}s`;
+        entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
 );
 
-revealEls.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(28px)';
-  el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+animatedElements.forEach(el => {
+  el.classList.add('animate-in');
   observer.observe(el);
+});
+
+// ===========================
+// ACTIVE NAV LINK on scroll
+// ===========================
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-menu a:not(.nav-cta)');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 160;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+}, { passive: true });
+
+// ===========================
+// FAQ ACCORDION
+// ===========================
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+    if (!isOpen) {
+      item.classList.add('open');
+    }
+  });
 });
