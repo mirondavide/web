@@ -6,6 +6,19 @@
   <title>Ristorante Pizzeria Andrea's – Sant'Andrea Bagni</title>
   <meta name="description" content="Ristorante Pizzeria Andrea's a Sant'Andrea Bagni (PR). Pizza sottile e croccante, pesce fresco, kamut, integrale, senza glutine. Prenota il tuo tavolo.">
   <link rel="canonical" href="https://www.ristorantepizzeriaandreas.it/">
+  <meta name="theme-color" content="#B87333">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ristorante Pizzeria Andrea's – Sant'Andrea Bagni">
+  <meta property="og:description" content="Pizza sottile e croccante, pesce fresco e la passione di oltre vent'anni. Prenota il tuo tavolo!">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&q=80&auto=format&fit=crop">
+  <meta property="og:url" content="https://www.ristorantepizzeriaandreas.it/">
+  <meta property="og:type" content="restaurant">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1920&q=80&auto=format&fit=crop" fetchpriority="high">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,6 +73,15 @@
 </head>
 <body>
 
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">Andrea's</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <div class="loader-text">Benvenuti...</div>
+    </div>
+  </div>
+
   <!-- Floating Navigation -->
   <nav class="floating-nav" id="navbar">
     <div class="nav-container">
@@ -71,6 +93,7 @@
         <li><a href="#pesce"><span class="nav-icon">🐟</span>Pesce</a></li>
         <li><a href="#dolci"><span class="nav-icon">🍰</span>Dolci</a></li>
         <li><a href="#recensioni"><span class="nav-icon">⭐</span>Recensioni</a></li>
+        <li><a href="#galleria"><span class="nav-icon">📸</span>Galleria</a></li>
         <li><a href="#contatti"><span class="nav-icon">📍</span>Contatti</a></li>
         <li class="mobile-only"><a href="tel:+390525431818" class="nav-cta"><span class="nav-icon">📞</span>Prenota</a></li>
       </ul>
@@ -136,24 +159,43 @@
       <p class="section-subtitle">Ingredienti genuini, impasti lavorati con cura, ricette della tradizione e il meglio del mare.</p>
       <div class="top-picks-grid">
         <div class="pick-card">
-          <div class="pick-icon">🍕</div>
+          <div class="pick-image"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80&auto=format&fit=crop" alt="Pizza sottile e croccante" loading="lazy"></div>
           <h3>Pizza Sottile e Croccante</h3>
           <p>La nostra firma: impasto tirato sottile, condimenti stagionali e croccantezza unica</p>
         </div>
         <div class="pick-card">
-          <div class="pick-icon">🌾</div>
+          <div class="pick-image"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80&auto=format&fit=crop" alt="Impasti speciali artigianali" loading="lazy"></div>
           <h3>Impasti Speciali</h3>
           <p>Kamut, integrale macinata a pietra, senza lievito e senza glutine certificato AIC</p>
         </div>
         <div class="pick-card">
-          <div class="pick-icon">🐟</div>
+          <div class="pick-image"><img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=600&q=80&auto=format&fit=crop" alt="Pesce fresco alla griglia" loading="lazy"></div>
           <h3>Pesce Fresco</h3>
           <p>Gamberoni alla griglia, tortelli al pesce, frittura mista e antipasti di mare</p>
         </div>
         <div class="pick-card">
-          <div class="pick-icon">🛡️</div>
+          <div class="pick-image"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&q=80&auto=format&fit=crop" alt="Cucina certificata AIC" loading="lazy"></div>
           <h3>Certificazione AIC</h3>
           <p>Cucina senza glutine iscritta all'Associazione Italiana Celiachia, ambiente dedicato</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats-section" id="stats">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="772">0</span>
+          <span class="stat-label">Recensioni Google</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="20">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Anni di Esperienza</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-label">Tipi di Impasto</span>
         </div>
       </div>
     </section>
@@ -411,6 +453,46 @@
       </div>
     </section>
 
+    <!-- GALLERIA FOTOGRAFICA -->
+    <section id="galleria" class="gallery-section">
+      <h2>La Nostra Galleria</h2>
+      <p class="section-subtitle">Scorci dal nostro ristorante, i piatti e l'atmosfera che ci rendono unici.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--wide">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop" alt="Pizza artigianale" loading="lazy">
+          <div class="gallery-overlay"><span>Pizza Artigianale</span></div>
+        </div>
+        <div class="gallery-item gallery-item--tall">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80&auto=format&fit=crop" alt="Sala ristorante" loading="lazy">
+          <div class="gallery-overlay"><span>La Nostra Sala</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=800&q=80&auto=format&fit=crop" alt="Primi piatti" loading="lazy">
+          <div class="gallery-overlay"><span>Primi Piatti</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80&auto=format&fit=crop" alt="Frutti di mare" loading="lazy">
+          <div class="gallery-overlay"><span>Frutti di Mare</span></div>
+        </div>
+        <div class="gallery-item gallery-item--wide">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&auto=format&fit=crop" alt="Atmosfera serale" loading="lazy">
+          <div class="gallery-overlay"><span>Atmosfera Serale</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80&auto=format&fit=crop" alt="Dolci della casa" loading="lazy">
+          <div class="gallery-overlay"><span>Dolci della Casa</span></div>
+        </div>
+        <div class="gallery-item gallery-item--tall">
+          <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=800&q=80&auto=format&fit=crop" alt="Forno a legna" loading="lazy">
+          <div class="gallery-overlay"><span>Forno a Legna</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=800&q=80&auto=format&fit=crop" alt="Tavola apparecchiata" loading="lazy">
+          <div class="gallery-overlay"><span>La Tavola</span></div>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section id="faq" class="faq-section">
       <h2>Domande Frequenti</h2>
@@ -522,6 +604,13 @@
 
   </main>
 
+  <!-- Wave separator before footer -->
+  <div class="wave-separator">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,40 C360,100 1080,0 1440,60 L1440,100 L0,100 Z" fill="#1C1410"/>
+    </svg>
+  </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
@@ -532,9 +621,27 @@
         <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.tripadvisor.it" target="_blank" rel="noopener">TripAdvisor</a>
       </div>
-      <span class="footer-copy">&copy; 2025 Ristorante Pizzeria Andrea's</span>
+      <span class="footer-copy">&copy; <span id="copyrightYear"></span> Ristorante Pizzeria Andrea's</span>
     </div>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Chiudi">&times;</button>
+    <button class="lightbox-prev" aria-label="Precedente">&#10094;</button>
+    <button class="lightbox-next" aria-label="Successiva">&#10095;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/390525431818?text=Ciao!%20Vorrei%20prenotare%20un%20tavolo." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contattaci su WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.2l6.044-1.94a15.9 15.9 0 008.906 2.74C24.826 32 32 24.826 32 16.004S24.826 0 16.004 0zm9.35 22.616c-.392 1.106-2.286 2.054-3.15 2.144-.802.082-1.82.116-2.938-.184a26.9 26.9 0 01-2.66-1.022c-4.682-2.074-7.74-6.832-7.976-7.15-.236-.318-1.92-2.574-1.92-4.91s1.216-3.482 1.646-3.96c.432-.478.94-.598 1.254-.598.314 0 .628.002.902.016.29.016.678-.11 1.06.81.392.94 1.332 3.258 1.448 3.494.118.236.196.512.04.826-.158.314-.236.51-.472.786-.236.274-.498.614-.71.824-.236.236-.482.49-.208.96.276.472 1.224 2.024 2.63 3.278 1.808 1.614 3.332 2.114 3.804 2.35.47.236.746.196 1.02-.118.276-.314 1.178-1.374 1.492-1.846.314-.472.628-.392 1.06-.236.432.158 2.742 1.296 3.212 1.532.472.236.786.354.902.55.118.196.118 1.128-.274 2.234z"/></svg>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Torna su">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
 
   <script src="script.js"></script>
 </body>
