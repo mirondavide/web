@@ -1,15 +1,4 @@
 // ===========================
-// LOADER
-// ===========================
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const loader = document.getElementById('loader');
-    loader.classList.add('loader-hidden');
-    document.body.classList.add('loaded');
-  }, 1500);
-});
-
-// ===========================
 // NAVBAR: scroll effect
 // ===========================
 const navbar = document.getElementById('navbar');
