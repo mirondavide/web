@@ -99,20 +99,19 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
   border-color: rgba(255,255,255,0.3);
 }
 
-.nav-logo-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: -0.01em;
-  transition: color 0.4s ease;
+.nav-logo-img {
+  height: 70px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s ease, transform 0.3s ease, height 0.3s ease;
 }
 
-.floating-nav.scrolled .nav-logo-text {
-  color: var(--white);
+.floating-nav.scrolled .nav-logo-img {
+  height: 54px;
 }
 
-.nav-logo:hover .nav-logo-icon { transform: rotate(-8deg) scale(1.05); }
+.nav-logo:hover .nav-logo-img { opacity: 0.85; transform: scale(1.03); }
 
 /* ---- Nav links ---- */
 .nav-menu {
@@ -757,6 +756,11 @@ main { padding: 1rem 0; }
   margin-bottom: 4rem;
 }
 
+
+#antipasti {
+  margin-top: 4rem;
+}
+
 .menu-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -856,8 +860,23 @@ main { padding: 1rem 0; }
   line-height: 1.6;
 }
 
+.aic-chip {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  margin-right: 0.4rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
 .menu-note {
   margin-top: 1.5rem;
+  margin-bottom: 2rem;
   padding: 1rem 1.5rem;
   background: var(--white);
   border-radius: 16px;
@@ -1340,11 +1359,12 @@ main { padding: 1rem 0; }
   padding: 0 1.5rem;
 }
 
-.footer h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  color: var(--white);
-  margin-bottom: 0.5rem;
+.footer-logo-img {
+  height: 64px;
+  width: auto;
+  display: block;
+  margin: 0 auto 0.5rem;
+  filter: brightness(0) invert(1);
 }
 
 .footer > .footer-inner > p {
