@@ -313,7 +313,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 .hero-background {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1920&q=80&auto=format&fit=crop') center/cover no-repeat;
+  background: url('images/hero.png') center/cover no-repeat;
   will-change: transform;
 }
 
