@@ -1440,14 +1440,18 @@
           </div>
           <a href="tel:+390525431818" class="contact-cta">📞 Prenota il tuo tavolo</a>
         </div>
-        <div class="contact-map">
+        <div class="contact-map" id="mapContainer">
           <iframe
             title="Mappa Ristorante Pizzeria Andrea's"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.5!2d10.1305!3d44.6535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sFristorante+Pizzeria+Andrea%27s!5e0!3m2!1sit!2sit!4v1"
+            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.5!2d10.1305!3d44.6535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sFristorante+Pizzeria+Andrea%27s!5e0!3m2!1sit!2sit!4v1"
             width="100%" height="100%" style="border:0;"
             allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
+          <div class="map-consent-placeholder" id="mapPlaceholder">
+            <span class="map-consent-icon">📍</span>
+            <p>Per visualizzare la mappa, accetta i cookie.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -1477,6 +1481,9 @@
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 0C8.246 0 4.898 1.194 2.598 3.092H0l1.986 2.07A7.463 7.463 0 003.5 12.5a7.46 7.46 0 005.1 7.08L12 24l3.4-4.42A7.46 7.46 0 0020.5 12.5a7.463 7.463 0 001.514-7.338L24 3.092h-2.598C19.102 1.194 15.754 0 12 0zm-5.5 7a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm11 0a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm-11 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm11 0a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-11 1.5a2 2 0 110 4 2 2 0 010-4zm11 0a2 2 0 110 4 2 2 0 010-4z"/></svg>
         </a>
       </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy e Cookie Policy</a>
+      </div>
       <span class="footer-copy">&copy; <span id="copyrightYear"></span> Ristorante Pizzeria Andrea's</span>
     </div>
   </footer>
@@ -1493,6 +1500,17 @@
   <button class="back-to-top" id="backToTop" aria-label="Torna su">
     <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner-inner">
+      <p class="cookie-text">Questo sito utilizza cookie tecnici e di terze parti (Google Maps) per migliorare la tua esperienza. <a href="privacy.html#cookie-policy" class="cookie-link">Maggiori informazioni</a></p>
+      <div class="cookie-actions">
+        <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Accetta</button>
+        <button class="cookie-btn cookie-btn-reject" id="cookieReject">Rifiuta</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

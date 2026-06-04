@@ -281,3 +281,64 @@ const copyrightYear = document.getElementById('copyrightYear');
 if (copyrightYear) {
   copyrightYear.textContent = new Date().getFullYear();
 }
+
+// ===========================
+// COOKIE CONSENT
+// ===========================
+(function() {
+  var banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+
+  var acceptBtn = document.getElementById('cookieAccept');
+  var rejectBtn = document.getElementById('cookieReject');
+  var mapIframe = document.querySelector('#mapContainer iframe');
+  var mapPlaceholder = document.getElementById('mapPlaceholder');
+
+  function loadMap() {
+    if (mapIframe && mapIframe.getAttribute('data-src')) {
+      mapIframe.setAttribute('src', mapIframe.getAttribute('data-src'));
+      mapIframe.removeAttribute('data-src');
+      if (mapPlaceholder) mapPlaceholder.classList.add('hidden');
+    }
+  }
+
+  function hideBanner() {
+    banner.classList.add('hidden');
+    setTimeout(function() {
+      if (banner.parentNode) banner.parentNode.removeChild(banner);
+    }, 500);
+  }
+
+  // Check existing consent
+  var consent = null;
+  try { consent = localStorage.getItem('cookie_consent'); } catch(e) {}
+
+  if (consent === 'accepted') {
+    loadMap();
+    if (banner.parentNode) banner.parentNode.removeChild(banner);
+    return;
+  }
+
+  if (consent === 'rejected') {
+    if (banner.parentNode) banner.parentNode.removeChild(banner);
+    return;
+  }
+
+  // No consent yet — show banner, map stays blocked
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      try { localStorage.setItem('cookie_consent', 'accepted'); } catch(err) {}
+      loadMap();
+      hideBanner();
+    });
+  }
+
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      try { localStorage.setItem('cookie_consent', 'rejected'); } catch(err) {}
+      hideBanner();
+    });
+  }
+})();
